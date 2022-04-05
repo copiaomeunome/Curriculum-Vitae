@@ -1,0 +1,294 @@
+body{
+    margin:0;
+    height:100%;
+    position:absolute;
+    padding:0;
+    width:100%;
+    height:100%;
+    font: bold 15px arial, sans-serif;
+    background-color:#f5f5f5;
+    background-image:url("/images/lights.png");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+header{
+    margin:0;
+    position: fixed;
+    padding:15px;
+    width:100%;
+    z-index:+1;
+    text-align: center;
+    background-color:transparent;
+    display:flex;
+    transition: all 0.5s;
+}
+button>a{
+    text-decoration: none;
+    color:black;
+}
+#downloadButton{
+    margin-top:5%;
+    margin-bottom:5%;
+}
+span{
+    color:rgb(107, 228, 147);
+}
+header h1{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:0;
+    margin-bottom:0;
+}
+#options{
+    margin-left:auto;
+    margin-right:auto;
+}
+#curriculum{
+    display:none;
+}
+#services{
+    display:none;
+}
+#services>h2{
+    display:block;
+    width:100%;
+    margin-left:5%;
+}
+.serviceCard{
+    cursor:pointer;
+    overflow: hidden;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    background-color: white;
+    left: 0px;
+    top: 0px;
+    max-width: 500px;
+    min-height:300px;
+    margin: 12px;
+    min-width: 300px;
+    padding:15px;
+    perspective: 1000px;
+}
+.serviceCard img{
+    width:300px;
+    height:250px;
+}
+.front, .back{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.back{
+	transform: rotateY(180deg);
+}
+.flipper{
+	width: 100%;
+	height: 100%;
+    position: relative;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+.serviceCard:hover .flipper{
+	transform: rotateY(180deg);
+}
+.pageHeader{
+    background-color: rgb(107, 228, 147);
+    width:100%;
+    margin:0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-image:url("/images/lights.png");
+    background-repeat:no-repeat;
+    background-size: cover;
+    padding:30px;
+    text-align:center;
+    color:white;
+    transition-property: background-color;
+    transition-duration:2s;
+
+}
+h1{
+    font-size:50px;
+    font-weight:1000;
+}
+.card{
+    overflow: hidden;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    background-color: white;
+    left: 0px;
+    top: 0px;
+    max-width: 500px;
+    margin: 12px;
+    min-width: 200px;
+    padding:15px;
+    opacity: 0.5;
+    transition-property: all;
+    transition-duration: 0.5s;
+    cursor:pointer;
+}
+.card:hover{
+    opacity:1;
+}
+
+section{
+    border-radius: 8px;
+    width:90%;
+    margin-left:5%;
+    margin-top:15%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+#search{
+    text-align:center;
+    width:100%;
+    margin-bottom:5%;
+}
+#search>button{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:15px;
+    font-size:20px;
+}
+#search > p{
+    width:100%;
+}
+ul {
+    list-style: none;
+}
+li::before {
+    content: "•";
+    color: rgb(107, 228, 147);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em
+}
+
+ul>li>ul>li::before{
+    color: rgb(228, 176, 107);
+}
+.listUl>li::before{
+    content: "";
+}
+#home>.pageHeader>h1{
+    width:100%;
+    margin-left:5%;
+    display:block;
+}
+.pageHeader>img{
+    min-width:250px;
+    max-width:300px;
+    max-height:300px;
+    object-fit: cover;
+    position:absolute;
+    left:5%;
+    border-radius:8px;
+    border:2px solid white;
+}
+.lists{
+    display:flex;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left:0;
+    margin-right:auto;
+}
+#myDescription{
+    margin-top:5%;
+    margin-left:auto;
+    margin-right:auto;
+}
+#home{
+    font-weight:400;
+    font-size:15px;
+    color:rgb(74, 74, 77);
+}
+#myDescription>p{
+    display:flex;
+    max-width:500px;
+}
+#downloadDiv{
+    display:flex;
+    width:100%;
+}
+#downloadDiv>button{
+    margin-left:auto;
+    margin-right:auto;
+}
+footer{
+    padding:15px;
+    text-align:center;
+    font-size:15px;
+    color:rgb(74, 74, 77);
+    width:100%;
+}
+
+#footerList{
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+
+}
+footer>h2{
+    display:block;
+    width:100%;
+}
+li>img{
+    max-width:15px;
+    max-height:15px;
+}
+.close{
+    border-radius: 8px;
+    margin:0;
+    transition:all 0.5s ease;
+    display:none;
+    background-color: white;
+    cursor:pointer;
+    width:5%;
+    height:10%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:+2;
+    margin:0;
+}
+.close:hover{
+    color:white;
+    background-color:red;
+}
+.big>div{
+    width:80%;
+    height:70%;
+    opacity:1;
+    z-index:+1;
+    position:fixed;
+    max-width:100%;
+    padding-left:15%;
+    padding-top:10%;
+    cursor:auto;
+}
+button{
+    background-color:white;
+    border-style: outset;
+    border-color: #addbb7;
+    height: 50px;
+    max-width: 300px;
+    border-radius:8px;
+    text-shadow:none;
+    font-weight:400;
+    font-size:15px;
+    color:rgb(74, 74, 77);
+    cursor:pointer;
+    margin-bottom:15px;
+    width:100%;
+}
+#cards{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
