@@ -1,8 +1,11 @@
 let cards = document.querySelectorAll(".card");
-let checkedBox = Array.from(document.querySelectorAll('header input[type="checkbox"]:checked')).map((chkBx) => chkBx.name);
-let cardsNames = Array.from(cards).map((cards) => cards.id);
+let checkedBox;
+let cardsNames;
 
 function cardFilter(){
+    checkedBox = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map((chkBx) => chkBx.name);
+    cardsNames = Array.from(cards).map((cards) => cards.id);
+    console.log(checkedBox);
     for(let i=0; i<cards.length; i++){
         let currentCard = 1;
         for(let j=0; j<checkedBox.length; j++){
